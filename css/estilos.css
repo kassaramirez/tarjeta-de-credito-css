@@ -111,4 +111,14 @@ max-width: 80px;
 	backface-visibility: hidden;
 }
 
+.trasera .magnetic-bar {
+	height: 40px;
+	background: brown;
+	width: 100%;
+	position: absolute;
+	top: 30px;
+	left: 0 ;
+
+}
+
 
