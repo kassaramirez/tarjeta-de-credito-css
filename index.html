@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Formulario de Tarjeta de Crédito Dinámico</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato|Liu+Jian+Mao+Cao&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/estilos.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!--Contiene la tarjeta, forma-->
+      <section class="tarjeta" id="tarjeta">
+        <!--Tarjeta-->
+
+        <div class="delantera">
+          <div class="logo-marca">
+            <!--logo visa o mastercad-->
+            <img src="img/logos/mastercard.png" alt="logo tarjeta" />
+          </div>
+
+          <img src="img/chip-tarjeta.png" alt="chip" class="chip" />
+          <!--imagen de chip-->
+
+          <div class="data">
+            <div class="group" id="number">
+              <!--Donde se coloca el numero de la tarjeta-->
+              <p class="label">Card number</p>
+              <!--para que salga arriba del numero de la tarjeta-->
+              <p class="numbers">#### #### #### ####</p>
+            </div>
+
+            <div class="flexbox">
+              <div class="group" id="name">
+                <!--Donde se coloca el nombre de la tarjeta-->
+                <p class="label">Card name</p>
+                <!--para que salga arriba del nommbre de la tarjeta-->
+                <p class="names">Joliet Boada</p>
+              </div>
+
+              <div class="group" id="expiration">
+                <!--Donde se coloca el mes y fecha de expiracion de la tarjeta-->
+                <p class="label">Expiration</p>
+                <!--para que salga arriba de los datos a ingresar-->
+                <p class="expirations">
+                  <span class="month">MM</span> / <span class="year">YY</span>
+                </p>
+                <!--Se le coloca el span para que se pueda modificar de forma independiente-->
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="trasera">
+          <div class="magnetic bar"></div> <!--para colocar la barra magnetica-->
+          <div class="data"> <!--se reutilizaran los estilos de data-->
+            <div class="group" id="firma"> <!--se reutilizaran los estilos de group-->
+              <p class="label">Firma</p> <!--se reutilizaran los estilos de label-->
+              <div class="firmas">
+                <p></p>
+              </div>
+
+              <div class="group" id="ccv"> <!--ingresar codigo de verificacion de 3 nuner-->
+                <p class="label">CCV</p>
+                <p class="ccvs"></p>
+              </div>
+            </div>
+          </div>
+
+          <p class="leyenda">The card is the property of the insuer and must be 
+            surrendered upon request. Use of this card is subject to the 
+            custumer agreement. </p>
+
+          <a href="#" class="link-banco"> www.banco.com</a>
+
+
+        </div>
+
+      </section>
+    </div>
+
+    <script
+      src="https://kit.fontawesome.com/2c36e9b7b1.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

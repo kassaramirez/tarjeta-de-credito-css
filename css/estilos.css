@@ -1,0 +1,114 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background: #ddeefc;
+	font-family: 'Lato', sans-serif;
+}
+
+.container {
+	width: 90%;
+	max-width: 1000px; /*para que no ocupe todo el ancho*/
+	padding: 40px 20px;
+	margin: auto; /*para centrar la pagina de forma horizaontal*/
+	display: flex;
+	flex-direction: column;
+	background: #ddeefc;
+	align-items: center; /*no se usa justify-content, porque se cambio 
+	la direccion a columna, por ello se debe usar align-items para centrar con respecto al contenedor*/
+}
+
+/*ESTILOS GENERALES DE LAS TARJETAS*/
+
+.tarjeta {
+width: 100%;
+max-width: 550px; /*para que no ocupe todo el espacio*/
+position: relative; /*es importante que este relative, para que se pueda mostrar la parte de atras de la tarjeta*/
+color: #fff;
+transition: .3s ease all; /*transicion de 0.3 segundos para todo*/
+transform: rotateY(0deg); /*que por defecto tenga una rotacion de 0, que se quede fija*/
+transform-style: preserve-3d; /*permite el efecto 3d*/
+backface-visibility: hidden; /*para que al girar la tarjeta esta cara no se vae detras*/
+cursor: pointer;
+/*z-index: 2; como esta por capaz, primero el boton, luego la tarjeta y luego el fomulario
+se le coloca el z-index para manejar las prioridades*/
+}
+
+.tarjeta.active { /*la clase final es .tarjeta.active que funcionara con js*/
+transform: rotateY(180deg);  /*ya gira la tarjeta*/
+}
+
+.tarjeta > div { /*para ambos lados de la tarjeta*/
+padding: 30px;
+border-radius: 15px;
+min-height: 315px;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+box-shadow: 0 10px 10px 0 rgb(90, 116, 148, 0.3); /* el o.3 es opacidad*/
+}
+
+/*TARJETA DELANTERA*/
+
+.tarjeta .delantera {/*solo para ese contenedor*/
+	width: 100%;
+	background: #19396C;
+	background-size: cover;
+}
+
+.delantera .logo-marca { /*solo para ese contenedor*/
+	text-align: right;
+	min-height: 50px;
+
+}
+
+.delantera .logo-marca img {
+width: 100%; 
+height: 100%;
+object-fit: cover; /*no se distorsiona la imagen*/
+max-width: 80px;
+}
+
+.delantera .chip {
+	width: 100%;
+	max-width: 50px;
+	margin-bottom: 20px;
+}
+
+.delantera .group .label { /*para todos los label*/
+	font-size: 16px;
+	color: #7d8994;
+	margin-bottom: 5px;
+}
+
+.delantera .group .numbers,
+.delantera .group .names,
+.delantera .group .expiration { /*para colocar todo el texto en mayuscula*/
+	color: #fff;
+	font-size: 22px;
+	text-transform: uppercase;
+}
+
+.delantera .flexbox { /*para mover el mes y el año a la derecha*/
+	display: flex;
+	justify-content: space-between;
+	margin-top: 20px;
+}
+
+
+/*TARJETA TRASERA*/
+
+.trasera {/*solo para ese contenedor*/
+	width: 100%;
+	background: #19396C;
+	background-size: cover;
+	position: absolute; /*position absolut y top 0 hace que la tarejta se mueva hacia ariiba*/
+	top: 0;
+	transform: rotateY(180deg);
+	backface-visibility: hidden;
+}
+
+
